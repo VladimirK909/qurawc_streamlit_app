@@ -18,7 +18,9 @@ def main():
         st.error(f"The folder '{folder_path}' does not exist.")
         return
 
-    image_files = get_image_files(folder_path)
+    #image_files = get_image_files(folder_path)
+    image_files = sorted([f for f in os.listdir(folder_path) if f.endswith(('png', 'jpg', 'jpeg'))])
+
 
     if not image_files:
         st.error("No image files found in the specified folder.")
