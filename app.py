@@ -24,8 +24,6 @@ def main():
         st.error("No image files found in the specified folder.")
         return
 
-    image_files.sort()  # Sort files alphabetically
-
     index = st.slider("Visualize the firefighting animation shown in the presentation:", 0, len(image_files) - 1, 0)
 
     image_path = os.path.join(folder_path, image_files[index])
